@@ -69,7 +69,6 @@ public class HlavniProgram {
 
     }
 
-
     private void nakresliMnohouhelnik(Turtle zofka, double polomer, double pocetStran, Color barvaCary) {
         zofka.setPenColor(barvaCary);
         double uhel = 360.0 / pocetStran;

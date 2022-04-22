@@ -13,14 +13,25 @@ public class HlavniProgram {
         zofka.setLocation(150, 200);
         zofka.turnRight(30);
         nakresliRovnostrannyTrojuhelnik(zofka, 100);
+        zofka.setLocation(80, 230);
+        zofka.turnLeft(90);
+        nakresliKolecko(zofka, 11);
 
-         zofka.setLocation(150, 350);
-         zofka.turnLeft(30);
-         nakresliCtverec(zofka, 100);
+
+
+       // zofka.setLocation(150, 350);
+        // zofka.turnLeft(30);
+        // nakresliCtverec(zofka, 100);
 
 
 
     }
+
+    private void nakresliKolecko(Turtle zofka, double polomer) {
+        nakresliMnohouhelnik(zofka, polomer, 30);
+
+    }
+
 
     private void nakresliMnohouhelnik(Turtle zofka, double polomer, double pocetStran) {
         double uhel = 360.0 / pocetStran;

@@ -14,8 +14,21 @@ public class HlavniProgram {
         zofka.turnRight(30);
         nakresliRovnostrannyTrojuhelnik(zofka, 100);
 
+         zofka.setLocation(150, 350);
+         zofka.turnLeft(30);
+         nakresliCtverec(zofka, 100);
+
+
 
     }
+
+    private void nakresliCtverec(Turtle zofka, double delkaStrany) {
+        for (int i = 0; i < 4; i++) {
+            zofka.turnRight(90);
+            zofka.move(delkaStrany);
+        }
+    }
+
 
 
 

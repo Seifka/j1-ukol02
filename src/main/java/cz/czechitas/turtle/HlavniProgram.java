@@ -2,12 +2,20 @@ package cz.czechitas.turtle;
 
 import cz.czechitas.turtle.engine.Turtle;
 
+import javax.swing.*;
+import java.awt.*;
+
 public class HlavniProgram {
 
     public void main(String[] args) {
         Turtle zofka;
 
         zofka = new Turtle();
+        Color sedaBarva;
+        sedaBarva = new Color(140,140,140);
+
+        Color modraBarva;
+        modraBarva = new Color(70,70,140);
 
         //zmrzlina//
         zofka.setLocation(150.0, 200.0);
@@ -38,9 +46,10 @@ public class HlavniProgram {
         //masinka//
         zofka.setLocation(800.0, 400.0);
         zofka.turnLeft(10.0);
-        nakresliObdelnik(zofka, 100.0, 200.0);
+        nakresliObdelnik(zofka, 100.0, 200.0, sedaBarva);
         zofka.turnRight(90.0);
-        nakresliObdelnik(zofka, 100.0, 200.0);
+        nakresliObdelnik(zofka, 100.0, 200.0, sedaBarva);
+        zofka.setPenColor(modraBarva);
         zofka.setLocation(900.0, 400.0);
         nakresliKolecko(zofka, 10.0);
         zofka.setLocation(760.0, 425.0);
@@ -50,7 +59,6 @@ public class HlavniProgram {
         zofka.setLocation(600.0, 420.0);
         zofka.turnLeft(60.0);
         nakresliRovnostrannyTrojuhelnik(zofka, 100.0);
-
 
 
     }
@@ -70,7 +78,8 @@ public class HlavniProgram {
     }
 
 
-    private void nakresliObdelnik(Turtle zofka, double delkaStranyA, double delkaStranyB) {
+    private void nakresliObdelnik(Turtle zofka, double delkaStranyA, double delkaStranyB, Color barvaCary) {
+        zofka.setPenColor(barvaCary);
         for (int i = 0; i < 2; i++) {
             zofka.turnLeft(90.0);
             zofka.move(delkaStranyA);

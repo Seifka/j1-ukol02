@@ -22,6 +22,25 @@ public class HlavniProgram {
 
     }
 
+    private void nakresliMnohouhelnik(Turtle zofka, double polomer, double pocetStran) {
+        double uhel = 360.0 / pocetStran;
+        for (int i = 0; i < pocetStran; i++) {
+            zofka.move(polomer);
+            zofka.turnRight(uhel);
+        }
+    }
+
+
+    private void nakresliObdelnik(Turtle zofka, double delkaStranyA, double delkaStranyB) {
+        for (int i = 0; i < 2; i++) {
+            zofka.turnLeft(90);
+            zofka.move(delkaStranyA);
+            zofka.turnLeft(90);
+            zofka.move(delkaStranyB);
+        }
+    }
+
+
     private void nakresliCtverec(Turtle zofka, double delkaStrany) {
         for (int i = 0; i < 4; i++) {
             zofka.turnRight(90);
